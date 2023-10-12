@@ -1,11 +1,11 @@
 import { derived, writable, get } from "svelte/store";
-import translations from "./translations";
+import translations from "$lib/translations";
 import { onMount } from "svelte";
 
 export const locale = writable("en");
 export const locales = Object.keys(translations);
 
-locale.set(navigator.language.replace(/-.*$/, ''));
+locale.set("en"); // navigator.language.replace(/-.*$/, ''));
 if (!locales.includes(get(locale))) {
   locale.set("en"); // fallback
 }

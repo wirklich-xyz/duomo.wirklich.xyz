@@ -1,9 +1,9 @@
 <script>
-  import { t, fns } from "./lib/i18n";
+  import { t, fns } from "$lib/i18n";
   import { onMount } from "svelte";
   import InfoLine from "./InfoLine.svelte";
   import { DateInput, DatePicker, localeFromDateFnsLocale } from "date-picker-svelte";
-  import { checkWeather, clearCache } from "./lib/weather.js";
+  import { checkWeather, clearCache } from "$lib/weather.js";
 
   let owApiKey = "9e5d6a93693d5cfd9436621b197abe4d"; // openweather
   var lat = 45.464664;

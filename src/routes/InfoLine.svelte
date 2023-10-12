@@ -1,5 +1,5 @@
 <script>
-    import { t } from "./i18n";
+    import { t } from "$lib/i18n";
     import { getLocaleDefaults } from "date-picker-svelte/locale";
 
     /** @type InfoLine data */

@@ -1,8 +1,9 @@
 <script>
-  import { t, locale, locales } from "./i18n";
+  import { t, locale, locales } from "$lib/i18n";
   import { onMount } from "svelte";
   import InfoLines from "./InfoLines.svelte";
   import { schedule_update } from "svelte/internal";
+  import { base } from '$app/paths';
   let infoLines;
 </script>
 
@@ -10,7 +11,7 @@
   <title>Duomo Milano Sun-Calendar</title>
 </svelte:head>
 
-<body style='background-attachment:fixed;position:relative;background-size:100% 100vh;background-image:url("images/duomo.svg");'>
+<body style='background-attachment:fixed;position:relative;background-size:100% 100vh;background-image:url("/duomo.svg");'>
 
 <header>
   <select bind:value={$locale}>
@@ -60,7 +61,7 @@
   :global(.button) {
     background-color: #b7cad7;
     border: 1px;
-	border-color: #411212;
+  	border-color: #411212;
     padding: 15px 34px;
     text-align: center;
     text-decoration: none;

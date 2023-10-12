@@ -1,4 +1,4 @@
-import { de, ru } from 'date-fns/locale';
+import { de, ru } from "date-fns/locale/index.js";
 
 export default {
   en: {
