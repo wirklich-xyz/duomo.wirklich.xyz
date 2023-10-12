@@ -11,8 +11,6 @@
   <title>Duomo Milano Sun-Calendar</title>
 </svelte:head>
 
-<body style='background-attachment:fixed;position:relative;background-size:100% 100vh;background-image:url("/duomo.svg");'>
-
 <header>
   <select bind:value={$locale}>
     {#each locales as l}
@@ -27,12 +25,8 @@
   <br />
   {@html $t("homepage.footer")}  
 </main>
-</body>
 
 <style>
-	:global(body){
-        background-image: url("duomo.svg");
-    }
   header {
     text-align: center;
     width: 100%;
