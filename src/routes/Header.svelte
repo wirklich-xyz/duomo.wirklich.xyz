@@ -37,4 +37,10 @@
     line-height: 10px;
   }
 
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 2em;
+    }
+  }
+
 </style>

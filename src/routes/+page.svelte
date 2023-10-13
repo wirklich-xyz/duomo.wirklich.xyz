@@ -2,7 +2,6 @@
   import { t, locale, locales } from "$lib/i18n";
   import { onMount } from "svelte";
   import InfoLines from "./InfoLines.svelte";
-  import { schedule_update } from "svelte/internal";
   import { base } from '$app/paths';
   let infoLines;
 </script>
@@ -27,6 +26,7 @@
       max-width: none;
     }
   }
+
   :global(.button) {
     background-color: #b7cad7;
     border: 1px;

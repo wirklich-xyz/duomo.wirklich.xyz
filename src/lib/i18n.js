@@ -10,6 +10,11 @@ if (!locales.includes(get(locale))) {
   locale.set("en"); // fallback
 }
 
+//onMount(async () => {
+//  locale.set(navigator.language.replace(/-.*$/, '')); 
+//});
+
+
 export const fns = derived(locale, ($locale) => { let r=translations[$locale]["fns"]; console.log("AAAAA ", $locale, $r); return r; });
 
 function translate(locale, key, vars) {
