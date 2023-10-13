@@ -1,10 +1,10 @@
-html, body {
+html {
 	position: relative;
 	width: 100%;
 	height: 100%;
 }
 
-:global(body) {
+body {
 	color: #333;
 	margin: 0;
 	padding: 8px;
@@ -12,6 +12,8 @@ html, body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	background-attachment:fixed;
 	position:relative;
+	width: 100%;
+	height: 100%;
 	background-size:100% 100vh;
 	background-image:url("duomo.svg");
 }
