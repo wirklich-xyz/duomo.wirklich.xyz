@@ -33,9 +33,7 @@
     return fetch(prod_server, {
       method: "POST",
       body: JSON.stringify(date_arr),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     })
       .then((r) => r.json())
       .then((data) => {

@@ -37,9 +37,15 @@
     line-height: 10px;
   }
 
-  @media (min-width: 640px) {
+  @media screen and (max-width: 600px) {
     h1 {
       font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.6em;
     }
   }
 
