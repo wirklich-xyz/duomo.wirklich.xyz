@@ -1,8 +1,9 @@
 <script>
-  import { t, locale, locales } from "$lib/i18n";
+  import { t, locale, locales } from '$lib/i18n';
   import { onMount } from "svelte";
-  import InfoLines from "./InfoLines.svelte";
+  import InfoLines from './InfoLines.svelte';
   import { base } from '$app/paths';
+
   let infoLines;
 </script>
 
@@ -13,6 +14,7 @@
 </main>
 
 <style>
+
   :global(main) {
     width: 700px;
     text-align: center;

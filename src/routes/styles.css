@@ -15,7 +15,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-size:100% 100vh;
-	background-image:url("duomo.svg");
+	background-image:url("$lib/images/duomo.svg");
 }
 
 a {
