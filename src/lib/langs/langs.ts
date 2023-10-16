@@ -3,15 +3,15 @@ import { De, Gb, It } from 'svelte-flag-icons';
 export default [
   {
     "code": "en",
-    "name": "English",
+    "name": "english",
     "icon": Gb,
   },{
     "code": "de",
-    "name": "Deutsch",
+    "name": "deutsch",
     "icon": De,
   },{
     "code": "it",
-    "name": "Italienisch",
+    "name": "l'italiano",
     "icon": It,
   }
 ]
