@@ -1,25 +1,23 @@
 <script>
   import { t, locale, locales } from "$lib/i18n";
   import languages from "$lib/langs/langs.ts";
-  //import { Icon } from "svelte-flag-icons";
-  //   import { De, Gb, It } from 'svelte-flag-icons';
-  //    import langs from "$lib/langs/langs.json";
-  //    import { Us } from 'svelte-flag-icons';
-  //    let entries = Object.entries(languages);
+  import { Tooltip } from "@svelte-plugins/tooltips";
 </script>
 
 <header>
   <div style="float:right;margin: 3px;">
     {#each languages as L}
-      <div class={$locale===L.code ? "lang_sel" : "lang_opt"}>
-        <svelte:component
-          this={L.icon}
-          size="15"
-          on:click={() => {
-            $locale = L.code;
-          }}
-        />
-      </div>
+      <Tooltip content={L.name} arrow="false" autoPosition="true" position="bottom-left" style="margin:1px;">
+        <div class={$locale === L.code ? "lang_sel" : "lang_opt"}>
+          <svelte:component
+            this={L.icon}
+            size="15"
+            on:click={() => {
+              $locale = L.code;
+            }}
+          />
+        </div>
+      </Tooltip>
     {/each}
   </div>
   <h1>{$t("homepage.title")}</h1>
