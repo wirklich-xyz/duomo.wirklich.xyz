@@ -1,24 +1,21 @@
 <script>
-    import { t } from "$lib/i18n";
+    import { locale, t } from "$lib/i18n";
     import { getLocaleDefaults } from "date-picker-svelte/locale";
 
     /** @type InfoLine data */
     export let infoLine;
-    /** @type locale */
-    export let locale;
 
     let day_str;
     let date_str;
     let hour_str;
     $: {
         let dd = new Date(infoLine.zenithTimes);
-        console.log(locale); 
-        day_str = dd.toLocaleDateString(locale, {weekday: "long"});
-        date_str = dd.toLocaleDateString(locale, { 
+        day_str = dd.toLocaleDateString($locale, {weekday: "long"});
+        date_str = dd.toLocaleDateString($locale, { 
             year: "numeric",
             month: "long",
             day: "numeric"});
-        hour_str = dd.toLocaleTimeString(locale, { 
+        hour_str = dd.toLocaleTimeString($locale, { 
             hour: "numeric",
             minute: "numeric"});
     }

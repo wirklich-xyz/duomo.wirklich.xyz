@@ -1,0 +1,23 @@
+{
+
+    "fns": {
+        "code": "de"
+    },
+
+    "homepage" : {
+        "title": "Duomo Milano Sonnenkalender",
+        "welcome": "Datum des Besuchs:",
+        "footer": "Achtung, zum Besuch des Doms wird ein Ticket benötigt. Das typische Ticket beinhaltet einen Besuch der \"terrasses\". Das bedeutet man betritt den Dom an der Nordseite und geht dort direkt auf das Dach des Doms. In das Innere des Doms kommt man dann auf dem Abstieg vom Dach. Planen sie mindestens 30-45min für die \"Terrassen\" ein (plus Wartezeit am Eingang). <br /> <a class=\"button\" href=\"https://ticket.duomomilano.it/en/biglietti/\" target=\"_blank\">Link zur offiziellen Buchungsseite</a><br /> Bitte die Wetterbedingungen noch einmal kontrollieren: <a href=\"https://www.accuweather.com/de/it/milan/214046/daily-weather-forecast/214046\" target=\"_blank\">AccuWeather</a> oder <a href=\"https://www.bergfex.it/sommer/mailand/wetter/\" target="_blank">bergfex.it</a>",
+    },
+
+    "data": {
+        "day": "Tag",
+        "date": "Datum",
+        "time": "Zeitpunkt",
+        "weather": "Wolken",
+    },
+
+    "text" : { 
+        "weather": "Wetter" 
+    }  
+}

@@ -15,7 +15,7 @@
 	</main>
 
 	<footer>
-		<p><a href="/">Home</a> | <a href="/impressum">Impressum</a> | <a href="/gdpr">data protection</a> </p>
+		<p><a href="/">home</a> | <a href="/impressum">impressum</a> | <a href="/gdpr">data protection</a> </p>
 	</footer>
 </div>
 

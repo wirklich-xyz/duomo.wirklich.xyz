@@ -1,24 +1,22 @@
 <script>
-  import { t, fns } from "$lib/i18n";
-  import { onMount } from "svelte";
-  import InfoLine from "./InfoLine.svelte";
+  import { locale, t, fns } from '$lib/i18n';
+  import { onMount } from 'svelte';
+  import InfoLine from './InfoLine.svelte';
   import { DateInput, DatePicker, localeFromDateFnsLocale } from "date-picker-svelte";
-  import { checkWeather, clearCache } from "$lib/weather.js";
+  import { checkWeather, clearCache } from '$lib/weather.js';
+  import { de, enGB, it } from "date-fns/locale/index.js";
+  import { env } from '$env/dynamic/public';
 
   let owApiKey = "9e5d6a93693d5cfd9436621b197abe4d"; // openweather
-  var lat = 45.464664;
-  var long = 9.18854;
+  var lat = 45.464664; // milano
+  var long = 9.18854; // milano
   var date = new Date();
   /** @type List of InfoLine*/
   export let infoLines;
-  /** @type locale */
-  export let locale;
 
   let localeFns;
   $: {
-    console.log(fns);
-    localeFns = localeFromDateFnsLocale(fns);
-    console.log("fns:" + localeFns.weekdays);
+    localeFns = localeFromDateFnsLocale($fns); // the locale and fns-locale are ~same
   }
 
   async function checkDate() {
@@ -29,7 +27,6 @@
     };
     let debug_server = "http://localhost:8081/times";
     let prod_server = "https://n96fh85qrk.execute-api.eu-central-1.amazonaws.com/dev/times";
-    console.log(JSON.stringify(date_arr))
     return fetch(prod_server, {
       method: "POST",
       body: JSON.stringify(date_arr),
@@ -59,10 +56,11 @@
       bind:value={date}
       closeOnSelection="true"
       dynamicPositioning="true"
+      pickTime="false"  
       placeholder="yyyy-MM-dd"
       format="yyyy-MM-dd"
       on:select={checkDate}
-      {localeFns}
+      locale={localeFns}
     />
   </div>
 </div>
@@ -77,7 +75,7 @@
       ><th>{$t("data.weather")}</th>
     </tr>
     {#each infoLines as infoLine}
-      <InfoLine bind:infoLine {locale} />
+      <InfoLine bind:infoLine />
     {/each}
   </table>
 {:else}

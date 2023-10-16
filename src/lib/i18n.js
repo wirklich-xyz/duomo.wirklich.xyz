@@ -1,39 +1,46 @@
 import { derived, writable, get } from "svelte/store";
 import translations from "$lib/translations";
 import { onMount } from "svelte";
+import { getLocaleFromNavigator } from "svelte-i18n";
 
+const isInitialized = writable(false);
 export const locale = writable("en");
 export const locales = Object.keys(translations);
 
-locale.set("en"); // navigator.language.replace(/-.*$/, ''));
-if (!locales.includes(get(locale))) {
-  locale.set("en"); // fallback
+locale.set("en"); // default and fallback
+
+export function init_i18n() {
+  if (get(isInitialized)) return;
+  isInitialized.set(true);
+  onMount(async () => {
+    let loc = getLocaleFromNavigator().replace(/-.*$/, '');
+    if (locales.includes(get(locale))) {
+      locale.set(loc);
+    }
+  });
 }
 
-//onMount(async () => {
-//  locale.set(navigator.language.replace(/-.*$/, '')); 
-//});
+export const fns = derived(locale, ($locale) => get_translate($locale, "fns") );
 
-
-export const fns = derived(locale, ($locale) => { let r=translations[$locale]["fns"]; console.log("AAAAA ", $locale, $r); return r; });
-
-function translate(locale, key, vars) {
+function get_translate(locale, key) {
   // Let's throw some errors if we're trying to use keys/locales that don't exist.
   // We could improve this by using Typescript and/or fallback values.
   if (!key) throw new Error("no key provided to $t()");
   if (!locale) throw new Error(`no translation for key "${key}"`);
 
   // Grab the translation from the translations object.
-  let text = translations[locale][key];
+  let data = translations[locale][key];
+  if (!data) throw new Error(`no translation found for ${locale}.${key}`);
+  return data;
+}
 
-  if (!text) throw new Error(`no translation found for ${locale}.${key}`);
-
+function translate(locale, key, vars) {
+  let text = get_translate(locale, key);
   // Replace any passed in variables in the translation string.
   Object.keys(vars).map((k) => {
     const regex = new RegExp(`{{${k}}}`, "g");
     text = text.replace(regex, vars[k]);
   });
-
   return text;
 }
 

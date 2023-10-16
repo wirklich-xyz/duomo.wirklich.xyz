@@ -1,20 +1,20 @@
 <script>
-  import { t, locale, locales } from '$lib/i18n';
-  import { onMount } from "svelte";
-  import InfoLines from './InfoLines.svelte';
-  import { base } from '$app/paths';
+  import { t, init_i18n } from "$lib/i18n";
+  import InfoLines from "./InfoLines.svelte";
+  import { base } from "$app/paths";
 
-  let infoLines;
+  init_i18n(); // init locales
+
+  let infoLines; // data to display
 </script>
 
 <main>
-  <InfoLines bind:infoLines locale={$locale} />
+  <InfoLines bind:infoLines />
   <br />
-  {@html $t("homepage.footer")}  
+  {@html $t("homepage.footer")}
 </main>
 
 <style>
-
   :global(main) {
     width: 700px;
     text-align: center;
@@ -32,7 +32,7 @@
   :global(.button) {
     background-color: #b7cad7;
     border: 1px;
-  	border-color: #411212;
+    border-color: #411212;
     padding: 15px 34px;
     text-align: center;
     text-decoration: none;
@@ -41,5 +41,4 @@
     margin: 4px 2px;
     cursor: pointer;
   }
-
 </style>
