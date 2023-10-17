@@ -7,7 +7,7 @@
 <header>
   <div style="float:right;margin: 3px;">
     {#each languages as L}
-      <Tooltip content={L.name} arrow="false" autoPosition="true" position="bottom-left" style="margin:1px;">
+      <Tooltip content={L.name} arrow="true" autoPosition="true" position="bottom-left">
         <div class={$locale === L.code ? "lang_sel" : "lang_opt"}>
           <svelte:component
             this={L.icon}

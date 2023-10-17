@@ -1,13 +1,21 @@
 import { de, enGB, it } from "date-fns/locale/index.js";
 
 export default {
-  en: {  
-    "fns": enGB,
-    "icon": "Gb",
+  en: {
+    fns: enGB,
+    icon: "Gb",
 
     "homepage.title": "Duomo Milano Sun-Calendar",
 
     "homepage.welcome": "Date of visit:",
+
+    "homepage.header": `Close to the west-side of the duomo, a few meters away from the main 
+    entrance doors, there is a hidden astronomical treasure: a bronze meridian line 
+    on the ground and a hole in the roof form a yearly calendar where the sun each day around noon will 
+    illuminate a spot along the line. If you come prepared with some advance-planning, you have a 
+    chance observing this for yourself. <br /> You find a tool here that calculates the exact time each day 
+    where the sun is in the zenith above the duomo. The cloud-probability should be 
+    low for a good observation. `,
 
     "homepage.footer": `Note, you need to book a ticket to visit the Duomo. There are different options,
       the typical trip includes the "terraces", which basically means you enter the building
@@ -41,14 +49,22 @@ export default {
     "text.weather": "Weather",
   },
 
-
   de: {
-    "fns": de,
-    "icon": "De",
+    fns: de,
+    icon: "De",
 
     "homepage.title": "Duomo Milano Sonnenkalender",
 
     "homepage.welcome": "Datum des Besuchs:",
+
+    "homepage.header": `In der Nähe der Westseite des Doms, nur wenige Meter von den 
+    Haupteingangstüren entfernt, verbirgt sich ein astronomischer Schatz: Eine Bronze-Meridianlinie 
+    auf dem Boden und ein Loch im Dach bilden einen jährlichen Kalender, in dem die Sonne jeden Tag 
+    gegen Mittag einen Punkt entlang der Linie beleuchtet. Wenn Sie mit einer sorgfältigen 
+    Vorausplanung kommen, haben Sie die Möglichkeit, dies selbst zu beobachten. <br /> 
+    Hier finden Sie ein Werkzeug, das die genaue Zeit berechnet, zu der die Sonne jeden Tag im 
+    Zenit über dem Dom steht. Die Wahrscheinlichkeit 
+    von Wolken sollte gering sein, um die Beobachtung zu ermöglichen.`,
 
     "homepage.footer": `Achtung, zum Besuch des Doms wird ein Ticket benötigt. Das typische Ticket 
     beinhaltet einen Besuch der "terrazze". Das bedeutet man betritt den Dom an der Nordseite
@@ -78,16 +94,25 @@ export default {
 
     "data.weather": "Wolken",
 
-    "text.weather": "Wetter"
+    "text.weather": "Wetter",
   },
 
   it: {
-    "fns": it,
-    "icon": "It",
+    fns: it,
+    icon: "It",
 
     "homepage.title": "Calendario Solare del Duomo Milano",
 
     "homepage.welcome": "Data della visita",
+
+    "homepage.header": `Vicino al lato ovest del duomo, a pochi metri dalle porte d'ingresso 
+    principali, si trova un tesoro astronomico nascosto: una linea meridiana in bronzo sul 
+    pavimento e un foro nel tetto formano un calendario annuale in cui il sole ogni giorno 
+    intorno a mezzogiorno illumina un punto lungo la linea. Se venite preparati con una 
+    pianificazione anticipata, avrete la possibilità di osservarlo da soli. <br /> 
+    Qui troverete uno strumento che calcola l'orario esatto in cui il sole è allo zenit sopra 
+    il duomo ogni giorno. La probabilità di 
+    nuvole dovrebbe essere bassa per consentire l'osservazione.`,
 
     "homepage.footer": `Nota: È necessario prenotare un biglietto per visitare il Duomo. Ci sono diverse opzioni,
     il tour tipico include le "terrazze", il che significa essenzialmente che si entra nell'edificio
@@ -120,6 +145,4 @@ export default {
 
     "text.weather": "Tempo",
   },
-
 };
-

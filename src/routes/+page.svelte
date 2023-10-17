@@ -9,6 +9,10 @@
 </script>
 
 <main>
+  <p>
+    {@html $t("homepage.header")}
+  </p>
+  <br />
   <InfoLines bind:infoLines />
   <br />
   {@html $t("homepage.footer")}
