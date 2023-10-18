@@ -7,7 +7,7 @@
   import { de, enGB, it } from "date-fns/locale/index.js";
   import { env } from '$env/dynamic/public';
 
-  let owApiKey = "9e5d6a93693d5cfd9436621b197abe4d"; // openweather
+  let owApiKey = env.PUBLIC_OWAPI; // openweather
   var lat = 45.464664; // milano
   var long = 9.18854; // milano
   var date = new Date();
