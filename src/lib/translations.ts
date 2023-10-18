@@ -35,8 +35,9 @@ export default {
       >
       or
       <a href="https://www.bergfex.it/sommer/mailand/wetter/" target="_blank"
-        >bergfex.it</a
-      >`,
+        >bergfex.it</a> <br /> Please note, this is free-to-use and free-of-charge 
+        Open Source Project (Apache2 License). There are no guarantees and no warranties that 
+        it will work or produce correct results. `,
 
     "data.day": "Day",
 
@@ -83,8 +84,9 @@ export default {
       >
       oder
       <a href="https://www.bergfex.it/sommer/mailand/wetter/" target="_blank"
-        >bergfex.it</a
-      >`,
+        >bergfex.it</a>.<br /> Bitte beachten Sie, dass es sich um ein kostenloses und gebührenfreies
+        Open-Source-Projekt handelt (Apache2 Lizenz). Es gibt keine Garantien und keine Gewährleistungen, dass
+        es funktioniert oder korrekte Ergebnisse erzeugt.`,
 
     "data.day": "Tag",
 
@@ -132,8 +134,9 @@ export default {
     >
     o
     <a href="https://www.bergfex.it/sommer/mailand/wetter/" target="_blank"
-      >bergfex.it</a
-    >`,
+      >bergfex.it</a> <br /> Si prega di notare che si tratta di un progetto Open Source gratuito e privo di costi
+      (Licenza Apache2). Non ci sono garanzie né garanzie che
+      funzioni o produca risultati corretti.`,
 
     "data.day": "Giorno",
 
