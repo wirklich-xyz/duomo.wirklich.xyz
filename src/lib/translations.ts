@@ -35,9 +35,23 @@ export default {
       >
       or
       <a href="https://www.bergfex.it/sommer/mailand/wetter/" target="_blank"
-        >bergfex.it</a> <br /> Please note, this is free-to-use and free-of-charge 
-        Open Source Project (Apache2 License). There are no guarantees and no warranties that 
-        it will work or produce correct results. `,
+        >bergfex.it</a> <br /><p> Please note, the service provided here is a free-to-use and free-of-charge 
+        Open Source Project (Apache2 License). There are no guarantees and no warranties whatsoever that 
+        it will work or produce correct results. </p>`,
+
+    "gdpr": `<p>
+    The website does not ask or store any personal data. The servers involved 
+    may store some information in logfiles related to requests send over the internet by 
+    you. This is technically necessary to serve your interests. <br />
+    </p><p>
+    The site uses a self-hosted (non-public) Open Web Analytics service for web analytics. 
+    No user data is stored for this purpose. Only session cookies, which are deleted 
+    directly after you 
+    close your connection, are technically needed for this purpose. This web analytics is 
+    needed to monitor the resource consumption of this free service. 
+    </p><p>
+    In case of questions write to ralf.m.ulrich@gmail.com 
+    </p>`,
 
     "data.day": "Day",
 
@@ -88,6 +102,21 @@ export default {
         Open-Source-Projekt handelt (Apache2 Lizenz). Es gibt keine Garantien und keine Gewährleistungen, dass
         es funktioniert oder korrekte Ergebnisse erzeugt.`,
 
+    "gdpr": `<p>
+        Die Website fragt nicht nach persönlichen Daten und speichert sie auch nicht. Die beteiligten Server 
+        können jedoch einige Informationen in Logdateien speichern, die sich auf Anfragen beziehen, die über das Internet von 
+        Ihnen gesendet werden. Dies ist technisch notwendig, um Ihre Interessen zu bedienen. <br />
+      </p>
+      <p>
+        Die Website verwendet einen selbstgehosteten (nicht öffentlichen) Open Web Analytics-Dienst für Webanalysen. 
+        Es werden keine Benutzerdaten zu diesem Zweck gespeichert. Nur Sitzungs-Cookies, die direkt nach 
+        Schließen Ihrer Verbindung gelöscht werden, sind technisch für diesen Zweck erforderlich. Diese Webanalyse ist 
+        erforderlich, um den Ressourcenverbrauch dieses kostenlosen Dienstes zu überwachen. 
+      </p>
+      <p>
+        Bei Fragen wenden Sie sich bitte an ralf.m.ulrich@gmail.com 
+      </p>`,
+        
     "data.day": "Tag",
 
     "data.date": "Datum",
@@ -137,6 +166,21 @@ export default {
       >bergfex.it</a> <br /> Si prega di notare che si tratta di un progetto Open Source gratuito e privo di costi
       (Licenza Apache2). Non ci sono garanzie né garanzie che
       funzioni o produca risultati corretti.`,
+
+    "gdpr": `<p>
+    Il sito web non richiede né conserva alcun dato personale. I server coinvolti 
+    possono memorizzare alcune informazioni nei file di log relative alle richieste inviate su Internet da 
+    parte vostra. Questo è tecnicamente necessario per soddisfare i vostri interessi. <br />
+  </p>
+  <p>
+    Il sito utilizza un servizio di analisi web auto-ospitato (non pubblico) Open Web Analytics. 
+    Nessun dato utente viene memorizzato a questo scopo. Sono necessari solo i cookie di sessione, che vengono eliminati 
+    immediatamente dopo la chiusura della connessione, per scopi tecnici. Questa analisi web è 
+    necessaria per monitorare il consumo di risorse di questo servizio gratuito. 
+  </p>
+  <p>
+    In caso di domande, scrivere a ralf.m.ulrich@gmail.com 
+  </p>`,
 
     "data.day": "Giorno",
 

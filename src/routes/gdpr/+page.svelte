@@ -4,9 +4,6 @@
 </script>
 
 <main>
-  The website does not ask or store any personal data. The servers involved 
-  may store some information in logfiles related to requests send over the internet by you. <br />
-
-  In case of questions write to ralf.m.ulrich@gmail.com 
+  {@html $t("gdpr")}
 </main>
 
