@@ -25,15 +25,15 @@ function formatDate(date) {
     return [YYYY, MM, DD].join('');
 }
 
-const owApiKey = "9e5d6a93693d5cfd9436621b197abe4d"; // openweather
 const lat = 45.464664;
 const lon = 9.188540;
 
 /**
  * @author Ralf Ulrich
- * @param data is a JSON object with InfoLine data. For each time of a line, the weather data is filled in. 
+ * @param data is a JSON object with InfoLine data. For each time of a line, the weather data is filled in.
+ * @param owApiKey OpenWeather API key, passed from env
  */
-export async function checkWeather(data) {
+export async function checkWeather(data, owApiKey) {
     let now = new Date();
     let nowMS = now.getTime();
     for await (var D of data) {

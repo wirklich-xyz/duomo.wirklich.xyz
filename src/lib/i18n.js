@@ -14,7 +14,7 @@ export function init_i18n() {
   isInitialized.set(true);
   onMount(async () => {
     let loc = getLocaleFromNavigator().replace(/-.*$/, '');
-    if (locales.includes(get(locale))) {
+    if (locales.includes(loc)) {
       locale.set(loc);
     }
   });
