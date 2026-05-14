@@ -5,6 +5,9 @@
 </script>
 
 <header>
+  <div style="float:left;margin: 3px;">
+   <a href="https://wirklich.xyz"><img width=60px src="/favicon.v0.png"/></a>
+  </div>
   <div style="float:right;margin: 3px;">
     {#each languages as L}
       <Tooltip content={L.name} arrow="true" autoPosition="true" position="bottom-left">
