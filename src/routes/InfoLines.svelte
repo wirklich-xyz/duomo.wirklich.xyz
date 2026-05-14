@@ -7,39 +7,41 @@
   import { de, enGB, it } from "date-fns/locale/index.js";
   import { env } from '$env/dynamic/public';
 
-  let owApiKey = env.PUBLIC_OWAPI; // openweather
-  var lat = 45.464664; // milano
-  var long = 9.18854; // milano
+  const owApiKey = env.PUBLIC_OWAPI;
+  const duomoApi = env.PUBLIC_DUOMO_API;
   var date = new Date();
   /** @type List of InfoLine*/
   export let infoLines;
 
   let localeFns;
+  let error = null;
   $: {
     localeFns = localeFromDateFnsLocale($fns); // the locale and fns-locale are ~same
   }
 
   async function checkDate() {
+    error = null;
+    infoLines = null;
     const date_arr = {
       year: date.getFullYear(),
       month: date.getMonth() + 1,
       day: date.getDate(),
     };
-    let debug_server = "http://localhost:8081/times";
-    let prod_server = "https://n96fh85qrk.execute-api.eu-central-1.amazonaws.com/dev/times";
-    return fetch(prod_server, {
-      method: "POST",
-      body: JSON.stringify(date_arr),
-      headers: { "Content-Type": "application/json" },
-    })
-      .then((r) => r.json())
-      .then((data) => {
-        return checkWeather(data);
-      })
-      .then((data) => {
-        infoLines = data;
-        return data;
+    try {
+      const r = await fetch(duomoApi, {
+        method: "POST",
+        body: JSON.stringify(date_arr),
+        headers: { "Content-Type": "application/json" },
       });
+      if (!r.ok) {
+        throw new Error(`Server error: ${r.status} ${r.statusText}`);
+      }
+      const data = await r.json();
+      infoLines = await checkWeather(data, owApiKey);
+    } catch (e) {
+      error = e.message ?? String(e);
+      console.error("checkDate failed:", e);
+    }
   }
 
   onMount(async () => {
@@ -67,7 +69,9 @@
 
 <br />
 
-{#if infoLines}
+{#if error}
+  <p class="error">{error}</p>
+{:else if infoLines}
   <table width="100%">
     <tr class="info">
       <th>{$t("data.day")}</th><th>{$t("data.date")}</th><th
@@ -83,6 +87,10 @@
 {/if}
 
 <style>
+  .error {
+    color: #c0392b;
+    font-weight: bold;
+  }
   .loading {
     opacity: 0;
     animation: 0.4s 0.8s forwards fade-in;

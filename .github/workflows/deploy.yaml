@@ -29,6 +29,8 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
+          PUBLIC_OWAPI: ${{ secrets.PUBLIC_OWAPI }}
+          PUBLIC_DUOMO_API: ${{ secrets.PUBLIC_DUOMO_API }}
         run: |
           npm run build
 
