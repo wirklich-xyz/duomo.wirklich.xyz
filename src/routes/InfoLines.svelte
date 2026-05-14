@@ -5,10 +5,10 @@
   import { DateInput, DatePicker, localeFromDateFnsLocale } from "date-picker-svelte";
   import { checkWeather, clearCache } from '$lib/weather.js';
   import { de, enGB, it } from "date-fns/locale/index.js";
-  import { env } from '$env/dynamic/public';
+  import { PUBLIC_OWAPI, PUBLIC_DUOMO_API } from '$env/static/public';
 
-  const owApiKey = env.PUBLIC_OWAPI;
-  const duomoApi = env.PUBLIC_DUOMO_API;
+  const owApiKey = PUBLIC_OWAPI;
+  const duomoApi = PUBLIC_DUOMO_API;
   var date = new Date();
   /** @type List of InfoLine*/
   export let infoLines;
